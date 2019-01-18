@@ -1,0 +1,104 @@
+.PrivateFMPage{
+	position:fixed;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+	background-color:#413F4D;
+	z-index: 11;
+}
+.PrivateFM-bg{
+	background-color:#413F4D;
+	box-shadow: none;
+	border-bottom: 1px solid #786E6E;
+}
+.bg-color-white{
+	color:#fff;
+}
+.PrivateFMLyrics{
+	height: 420px;
+    margin-top: 44px;
+}
+.PrivateFMBottom{
+    height: 200px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 15rem;
+}
+.PrivateFMBottom-musicName{
+	height:30px;
+	text-align:center;
+	line-height:30px;
+	color:#fff;
+	font-weight: bold;
+}
+.PrivateFMBottom-singerName{
+	height:30px;
+	text-align:center;
+	line-height:30px;
+	color:#BAB3B3;
+	font-size:15px;
+}
+.PrivateFMBottom-progress{
+	margin-top: 30px;
+	height:30px;
+}
+.PrivateFMBottom-progressTime{
+	height:30px;
+	line-height:30px;
+	text-align: center;
+	color:#fff;
+	font-size:13px;
+	float:left;
+	width: 3rem;
+}
+.PrivateFMBottom-progressSize{
+	width:9rem;
+	float:left;
+	margin-top:14px;
+	color: black;
+}
+.PrivateFMBottom-control{
+	height: 50px;
+    width: 14rem;
+    margin:0 .5rem;
+    margin-top: 5px;
+    text-align: center;
+    position: relative;
+}
+.PrivateFMBottom-control-img{
+	margin-top: 13px;
+}
+.play{
+	height:50px;
+	width: 50px;
+	margin:auto;
+}
+.delect{
+	position:absolute;
+	left:0;
+	height:30px;
+	margin-top: 10px;
+}
+.love{
+	position:absolute;
+	left:3rem;
+	height:30px;
+	margin-top: 10px;
+}
+.nextOne{
+	position:absolute;
+	right:3rem;
+	height:30px;
+	margin-top: 10px;
+}
+.comment{
+	position:absolute;
+	right:0;
+	height:30px;
+	margin-top: 10px;
+}
+.progressColor{
+	background-color: #fff !important;
+}

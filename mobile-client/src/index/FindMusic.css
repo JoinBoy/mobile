@@ -1,0 +1,37 @@
+.colorWhite{
+	color:#fff !important;
+}
+.bgColorWhite{
+	background-color:#fff !important;
+}
+#sliderSegmentedControl{
+	margin-top:1.8rem;	
+}
+body{
+	background-color: #fff;
+}
+.navClassBox{
+    height: 40px;
+    width: 15rem;
+    position: fixed;
+    top: 44px;
+    background-color: #fff;
+    z-index: 2;
+}
+.navClass{
+	float:left;
+	margin:0 1.5rem;
+	width:2rem;
+	line-height: 38px;
+	text-align: center;
+	color:#333 !important;
+}
+.activeNavClass{
+	float:left;
+	margin:0 1.5rem;
+	width:2rem;
+	line-height: 38px;
+	text-align: center;
+	color:#DD524D !important;
+	border-bottom:2px solid #DD524D;
+}
