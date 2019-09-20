@@ -17,41 +17,41 @@ class FindMusicBody extends React.Component{
 	}
 	
 	componentDidMount(){
-		this.getAjax();
 		this.bannerTime();
 	}
 	//定义轮播时间
-	bannerTime(){
+	async bannerTime(){
+		await this.getAjax();
 		var timer = mui("#banner");
-		console.log(timer)
-		setTimeout(function(){
-			timer.slider({
+		timer.slider({
 			interval:3000
 		});
-		},3000)
-		
 	};
 	/*异步请求数据*/
 	getAjax(){
 		var that = this;
-		$.ajax({
-			url:httpUrl+'/findMusicBody',
-			type:'GET',
-			data:{},
-			success:function(res){
-				that.setState({
-					f:res.f
-				})
-				const listItems = that.state.f.map((ee,i) =>
-							<div className='mui-slider-item' key={i}>
-								<img className=" bannerImgSize" alt="轮播图" src={ee.bannerimg} />
-							</div>
-					)
-				that.setState({
-					w:listItems
-				})
-			}
+		var p = new Promise((resolve, reject)=>{
+				$.ajax({
+				url:httpUrl+'/findMusicBody',
+				type:'GET',
+				data:{},
+				success:function(res){
+					that.setState({
+						f:res.f
+					})
+					const listItems = that.state.f.map((ee,i) =>
+								<div className='mui-slider-item' key={i}>
+									<img className=" bannerImgSize" alt="轮播图" src={ee.bannerimg} />
+								</div>
+						)
+					that.setState({
+						w:listItems
+					})
+					resolve(true)
+				}
+			})
 		})
+		return p;
 	};
 	render(){
 		if(this.state.f){
@@ -104,10 +104,6 @@ class FindMusicBody extends React.Component{
 						</div>				
 					</div>
 				</BrowserRouter>
-				
-				
-				
-				
 				<FindMusicBodyRecommend/>
 				<FindMusicBodyRecommend/>
 			</div>				
